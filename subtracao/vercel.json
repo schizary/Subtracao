@@ -1,0 +1,19 @@
+{
+    "version": 2,
+    "builds": [
+        {
+            "src": "api/calculate.js",
+            "use": "@vercel/node"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/api/calculate",
+            "dest": "/api/calculate.js"
+        },
+        {
+            "src": "/(.*)",
+            "dest": "/api/calculate.js"
+        }
+    ]
+}
